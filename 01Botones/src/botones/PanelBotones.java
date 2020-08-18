@@ -9,6 +9,16 @@ public class PanelBotones extends javax.swing.JPanel {
     public PanelBotones() {
         initComponents();
     }
+    
+    public void addEventos(OyenteBotones oyente) {
+        this.botonAzul.addActionListener(oyente);
+        this.botonRojo.addActionListener(oyente);
+        this.botonVerde.addActionListener(oyente);
+        
+        this.botonAzul.setName("azul");
+        this.botonRojo.setName("rojo");
+        this.botonVerde.setName("verde");
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -21,7 +31,6 @@ public class PanelBotones extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
-        panelNorte.setBorder(javax.swing.BorderFactory.createLineBorder(getBackground(), 5));
         panelNorte.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 5));
 
         botonAzul.setText("Cambiar a color Azul");
@@ -42,4 +51,9 @@ public class PanelBotones extends javax.swing.JPanel {
     private javax.swing.JButton botonVerde;
     private javax.swing.JPanel panelNorte;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JPanel getPanelNorte() {
+        return panelNorte;
+    }
+
 }
